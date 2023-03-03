@@ -1,0 +1,32 @@
+<html>
+<Head>
+
+</Head>
+<body>
+<div class="searchContainer">
+ <div *ngIf="user$ | async as user;" class="searched-user"> <!--Get user by id-->
+     <div class ="card-image">
+         <div class ="searchCard">
+
+             <div class ="image-content">
+                <span class="overlay"></span>
+                 <div class="card-image">
+                    <img src="{{user.avatar}}" alt="" class="card-img">
+                 </div>
+             </div>
+
+             <div class ="card-content">
+                 <span class="name">{{user.first_name}} {{user.last_name}}</span>
+                 <p class="text">{{user.email}}</p>
+                 <button (click)="back()" class="btn">back</button>
+              </div>
+
+             
+             </div>
+     </div>
+ </div>
+
+</div>
+
+</body>
+</html>
